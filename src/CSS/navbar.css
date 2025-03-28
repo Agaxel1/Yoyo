@@ -1,0 +1,100 @@
+/* 🔹 Navbar sobre el Slider */
+.navbar {
+    position: fixed; /* Cambiado de absolute a fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.665);
+    padding: 15px 20px;
+    z-index: 10;
+    transition: transform 0.3s ease-in-out; /* Animación para ocultar y mostrar */
+}
+
+/* Logo */
+.logo {
+    height: 80px;
+}
+
+/* Links del menú */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    border-radius: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+/* 🔹 Icono del Menú (Oculto en Desktop) */
+.menu-icon {
+    color: white;
+    background-color: #0000006d;
+    border-radius: 5px;
+    padding: 3px 10px;
+    display: none;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+/* 🔹 Estilos responsivos para Navbar */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        gap: 50px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        padding: 100px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links .top {
+        margin-top: 50px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        background-color: #d4d4d424;
+        border-radius: 20px;
+        padding: 5px 20px;
+    }
+
+    .navbar {
+        padding: 15px;
+    }
+}
+
+/* 🔹 Navbar oculto en scroll hacia abajo */
+.navbar.hidden {
+    transform: translateY(-100%); /* Desliza el navbar hacia arriba */
+}
