@@ -13,17 +13,18 @@
   flex: 1;
   max-width: 45%;
   padding-right: 20px;
+  padding-left: 30px;
 }
 
 .quienes-somos-texto h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
 }
 
 .quienes-somos-texto p {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   color: #333;
 }
 
@@ -33,9 +34,9 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   color: white;
-  padding: 25vh 20px;
+  padding: 12vh 20px;
   text-align: center;
-  max-width: 45%;
+  max-width: 50%;
   box-sizing: border-box;
 }
 
@@ -50,35 +51,31 @@
 @media (max-width: 768px) {
   .quienes-somos {
     flex-direction: column;
-    /* Cambia a columna para móviles */
     gap: 20px;
-    /* Reduce el gap entre las secciones */
     padding: 20px;
   }
 
   .quienes-somos-texto,
   .cita {
     max-width: 100%;
-    /* Asegura que ocupen todo el ancho disponible */
     flex: none;
-    /* Desactiva el flex para que no se estiren */
   }
 
   .quienes-somos-texto h2 {
-    font-size: 1.5rem;
-    /* Reduce el tamaño del título */
+    font-size: 1.8rem;
   }
 
-  .quienes-somos-texto p,
+  .quienes-somos-texto p {
+    font-size: 1.4rem;
+  }
+
   .cita p {
-    font-size: 1rem;
-    /* Reduce el tamaño del texto */
+    font-size: 1.8rem;
   }
 
   .cita {
+    border-radius: 10px;
     font-size: 1rem;
-    /* Tamaño de fuente ajustado para móvil */
     padding: 15px;
-    /* Menos padding en móvil para ahorrar espacio */
   }
 }

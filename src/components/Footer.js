@@ -1,13 +1,14 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import "../CSS/styles.css";
 
+
+console.log(process.env.REACT_APP_FACEBOOK_URL)
 const Footer = () => {
   // Accede a los enlaces desde las variables de entorno
   const facebookUrl = process.env.REACT_APP_FACEBOOK_URL;
   const twitterUrl = process.env.REACT_APP_TWITTER_URL;
   const instagramUrl = process.env.REACT_APP_INSTAGRAM_URL;
-  const linkedinUrl = process.env.REACT_APP_LINKEDIN_URL;
 
   return (
     <footer className="footer">
