@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../CSS/navbar.css";  // Importa el CSS del Navbar
-import logo from "../images/logo.png";
+import logo from "../images/logoYoyo.png";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -31,17 +31,15 @@ const Navbar = () => {
 
     return (
         <nav className={`navbar ${scrollingDown ? "hidden" : ""}`}>
-            <img src={logo} alt="Colectivo Comunidad Consiente" className="logo" />
-
+            <a href="/Home"><img src={logo} alt="Fundacion Yoyo Zevallos" className="logo" /></a>
             <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
                 ☰
             </div>
 
             <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-                <li className='top'><a href="/">Inicio</a></li>
-                <li><a href="/projects">Proyectos de Ayuda</a></li>
-                <li><a href="/events">Eventos</a></li>
-                <li><a href="/about">Sobre Nosotros</a></li>
+                <li><a href="/Home">La Fundación</a></li>
+                <li><a href="/Comunidad">Comunidad Consciente</a></li>
+                <li><a href="/Memoria">El Archivo De La Memoria</a></li>
             </ul>
         </nav>
     );

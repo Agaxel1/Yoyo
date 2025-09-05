@@ -1,18 +1,16 @@
 import React from "react";
 import Header from "../components/Header";
+import Proyectos from "../components/Proyectos";
 import Footer from "../components/Footer";
-import Carousel from "../components/Carousel";
-import Trabajo from "../components/Trabajo";
 
-const Home = () => {
+const Memoria = () => {
   return (
     <>
       <Header />
-      <Carousel/>
-      <Trabajo/>
+      <Proyectos/>
       <Footer />
     </>
   );
 };
 
-export default Home;
+export default Memoria;

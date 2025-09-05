@@ -4,16 +4,42 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import "../CSS/styles.css";
+import slider1 from '../images/slider1.jpg';
+import slider2 from '../images/slider2.jpg';
 
 const Carousel = () => {
     return (
-        <div className="carousel">
-            <Swiper navigation={true} modules={[Navigation]}>
-                <SwiperSlide><img src="https://api.vida-roleplay.com/imagenes/back1.png" alt="Slide 1" /></SwiperSlide>
-                <SwiperSlide><img src="https://api.vida-roleplay.com/imagenes/back2.png" alt="Slide 2" /></SwiperSlide>
-                <SwiperSlide><img src="https://api.vida-roleplay.com/imagenes/back3.png" alt="Slide 3" /></SwiperSlide>
-            </Swiper>
-        </div>
+        <div className="carousel-container">
+        <Swiper navigation={true} modules={[Navigation]} className="carousel">
+          <SwiperSlide>
+            <div className="carousel-slide">
+              <img src={slider1} alt="Slide 1" />
+              <div className="hero-text">
+                <h1>Colectivo Comunidad Consiente</h1>
+                <p>"PROPÓSITO O MENSAJE DEL COLECTIVO"</p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="carousel-slide">
+              <img src={slider2} alt="Slide 2" />
+              <div className="hero-text">
+                <h1>Colectivo Comunidad Consiente</h1>
+                <p>"PROPÓSITO O MENSAJE DEL COLECTIVO"</p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="carousel-slide">
+              <img src={slider1} alt="Slide 1" />
+              <div className="hero-text">
+                <h1>Colectivo Comunidad Consiente</h1>
+                <p>"PROPÓSITO O MENSAJE DEL COLECTIVO"</p>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
     );
 };
 

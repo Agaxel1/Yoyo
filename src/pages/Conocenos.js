@@ -1,18 +1,16 @@
 import React from "react";
 import Header from "../components/Header";
+import Conocenos from "../components/Conocenos";
 import Footer from "../components/Footer";
-import Carousel from "../components/Carousel";
-import Trabajo from "../components/Trabajo";
 
-const Home = () => {
+const conocenos = () => {
   return (
     <>
       <Header />
-      <Carousel/>
-      <Trabajo/>
+      <Conocenos/>
       <Footer />
     </>
   );
 };
 
-export default Home;
+export default conocenos;

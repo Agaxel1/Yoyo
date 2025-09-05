@@ -1,42 +1,45 @@
 /* 🔹 Navbar sobre el Slider */
 .navbar {
     position: fixed; /* Cambiado de absolute a fixed */
-    top: 0;
-    left: 0;
+    top: 25px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    background:rgb(187, 187, 187);
+    height: 50px;
+    padding: 10px 15px;
+    z-index: 1000;
+    overflow: visible; /* deja que el logo sobresalga */
     align-items: center;
-    background: rgba(0, 0, 0, 0.665);
-    padding: 15px 20px;
-    z-index: 10;
-    transition: transform 0.3s ease-in-out; /* Animación para ocultar y mostrar */
+    transition: transform 0.3s ease-in-out; /*Animación para ocultar y mostrar */
 }
 
 /* Logo */
 .logo {
-    height: 80px;
+    height: 75px;
+    z-index: 1001;
 }
 
 /* Links del menú */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    border-radius: 20px;
+    gap: 10px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 204);
     font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(0, 0, 34);
+    padding: 8px 20px;
+    border-radius: 50px;
+    display: inline-block;
 }
 
 .nav-links a:hover {
-    color: #eeb805;
+    color: rgb(187, 187, 187);
 }
 
 /* 🔹 Icono del Menú (Oculto en Desktop) */
@@ -65,7 +68,7 @@
         position: absolute;
         top: 0px;
         right: 0;
-        background: rgba(0, 0, 0, 0.9);
+        background: #000;
         width: 100%;
         text-align: center;
         padding: 100px;
@@ -96,5 +99,32 @@
 
 /* 🔹 Navbar oculto en scroll hacia abajo */
 .navbar.hidden {
-    transform: translateY(-100%); /* Desliza el navbar hacia arriba */
+    transform: translateY(-200%); /* Desliza el navbar hacia arriba */
+}
+
+/* Segunda navbar */
+.sub-navbar {
+  margin-top: 100px;
+  
+}
+
+.sub-navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.sub-navbar ul li {
+  margin: 0 15px;
+}
+.sub-navbar ul li a {
+  color: rgb(255, 255, 204);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  background-color: rgb(204, 102, 0);
+  padding: 6px 20px;
+  border-radius: 20px;
+}
+.sub-navbar ul li a:hover {
+  color: rgb(0, 0, 34);
 }

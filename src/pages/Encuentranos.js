@@ -1,18 +1,18 @@
 import React from "react";
 import Header from "../components/Header";
+import Redes from "../components/Redes";
+import Contacto from "../components/Contacto";
 import Footer from "../components/Footer";
-import Carousel from "../components/Carousel";
-import Trabajo from "../components/Trabajo";
 
-const Home = () => {
+const Encuentranos = () => {
   return (
     <>
       <Header />
-      <Carousel/>
-      <Trabajo/>
+      <Redes/>
+      <Contacto/>
       <Footer />
     </>
   );
 };
 
-export default Home;
+export default Encuentranos;

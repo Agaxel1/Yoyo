@@ -6,6 +6,10 @@
   font-family: Arial, sans-serif;
 }
 
+body {
+    background: rgb(255, 255, 204);
+    min-height: 100vh;
+}
 
 /* 🔹 Header con Slider */
 .header {
@@ -19,14 +23,14 @@
   border-radius: 50%;
   top: auto;
   z-index: 10;
-  color: #fff;
+  color: rgb(255, 255, 204);
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.715);
+  background-color: rgba(0, 0, 34, 0.7);
   font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 12px rgba(0, 0, 34, 0.3);
   transition: background-color 0.3s, transform 0.3s;
   transform: scale(0.9);
 }
@@ -41,22 +45,25 @@
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 34, 0.7);
   transform: scale(1);
 }
 
 
 /* Contenedor del Slider */
 .carousel-container {
+  margin: 30px auto 0 auto;
   position: relative;
-  width: 100%;
-  height: 600px;
+  width: 75%;
+  max-width: 1000px;
+  height: 100%;
+  max-height: 500px;
 }
 
 /* Imagen del Slider */
 .carousel img {
   width: 100%;
-  height: 600px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -67,17 +74,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 204);
+  background: rgba(0, 0, 34, 0.401);
   padding: 20px;
   border-radius: 10px;
 }
 
 /* 🔹 Responsivo para Slider y Texto */
 @media screen and (max-width: 768px) {
-  .carousel-container {
-    height: 300px;
-  }
+  .carousel-container {height: 300px;}
 
   .swiper-button-next,
   .swiper-button-prev {
@@ -86,24 +91,15 @@
     transform: scale(0.6);
   }
 
-
-
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
     transform: scale(0.6);
   }
 
-  .swiper-button-next {
-    right: -12px;
-  }
+  .swiper-button-next {right: -12px;}
+  .swiper-button-prev {left: -12px;}
 
-  .swiper-button-prev {
-    left: -12px;
-  }
-
-  .carousel img {
-    height: 300px;
-  }
+  .carousel img {height: 300px;}
 
   .hero-text {
     margin-top: 30px;
@@ -111,50 +107,397 @@
     padding: 10px;
   }
 
-  .hero-text h1 {
-    font-size: 1.4rem;
-    margin-bottom: 9px;
+  .hero-text h1 {font-size: 1.4rem; margin-bottom: 9px;}
+  .hero-text p {font-size: 0.8rem;}
+}
+
+/* Sección de Trabajo */
+.trabajo {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.trabajo h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: rgb(0, 0, 34);
+}
+
+/* Contenedor de las tarjetas */
+.trabajo .trabajo-container {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  flex-wrap: wrap;
+}
+
+.trabajo .trabajo-item img {
+  width: 100%;
+  height: 100px;
+  object-fit: scale-down;
+}
+
+.trabajo .trabajo-item p {
+  padding: 10px;
+  font-size: 1rem;
+  color: rgb(0, 0, 34);
+}
+
+/* Hover de las tarjetas */
+.trabajo .trabajo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(204, 102, 0, 0.449);
+}
+
+/* Responsivo de las tarjetas */
+@media screen and (max-width: 768px) {
+  .trabajo .trabajo-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .trabajo .trabajo-item {width: 80%;}
+}
+
+/* Redes Sociales */
+.redes-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: rgb(0, 0, 34);
+}
+
+.redes-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.redes-container .social-links a {
+  color: rgb(0, 0, 34);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.redes-container .social-links a:hover {
+  color: rgb(204, 102, 0);
+  transform: scale(1.1);
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .redes-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Sección de Contacto */
+.contacto-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 20px;
+  flex-wrap: wrap;
+}
+
+.contacto-info {
+  flex: 1;
+  min-width: 280px;
+  margin-left: 50px;
+}
+
+.contacto-info h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 34);
+}
+
+.contacto-info p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: rgb(0, 0, 34);
+}
+
+/* Caja del mapa */
+.contacto-mapa-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-width: 300px;
+}
+
+.mapa-box {
+  background: rgb(204, 102, 0);
+  width: 80%;
+  height: 300px;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  margin-right: -100px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Iframe sobresaliendo */
+.mapa-iframe {
+  width: 100%;
+  height: 250px;
+  margin-left: -300px;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 34, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.mapa-iframe:hover {
+  transform: scale(1.02);
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .contacto-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .hero-text p {
-    font-size: 0.8rem;
+  .mapa-box {
+    height: 200px;
+  }
+
+  .mapa-iframe {
+    width: 100%;
+    height: 250px;
+    margin-top: -40px;
   }
 }
 
 /* 🔹 Footer */
 .footer {
   background: #222;
-  color: white;
+  color: rgb(255, 255, 204);
   text-align: center;
   padding: 20px;
   margin-top: 20px;
 }
 
 /* 🔹 Estilos para las redes sociales */
-.social-links {
-  margin-top: 10px;
-}
+.social-links {margin-top: 10px;}
 
 .social-links a {
   cursor: pointer;
-  color: white;
+  color: rgb(255, 255, 204);
   margin: 0 15px;
   text-decoration: none;
 }
 
-.social-links a:hover {
-  color: #f39c12;
-}
+.social-links a:hover {color: rgb(204, 102, 0);}
 
 
 /* 🔹 Estilos responsivos para Footer */
 @media screen and (max-width: 768px) {
-  .footer {
-    padding: 15px;
-    font-size: 0.9rem;
+  .footer {padding: 15px; font-size: 0.9rem;}
+  .social-links a {font-size: 1.5rem;}
+}
+
+/* Sección de dos columnas conocenos */
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Columna izquierda */
+.left-side {
+  flex: 2;
+  padding: 20px;
+  font-size: 18px;
+  max-width: 700px;
+}
+
+.main-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/*Acordeon*/
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  background-color: rgb(255, 255, 204);
+  width: 100%;
+  text-align: left;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+/* Icono de triangulo del acordeon */
+.triangle {
+  transition: transform 0.3s ease;
+  color: rgb(204, 102, 0);
+  font-size: 40px;
+}
+
+.accordion-header.active .triangle {
+  transform: rotate(90deg);
+}
+
+/* Contenido oculto del acordeon */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 5px;
+}
+
+.accordion-content.open {
+  max-height: none; /* espacio para el texto */
+  padding: 5px;
+}
+
+/*Acordeon dividido en imagen y texto*/
+.accordion-dividido {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.accordion-img img {width: 150px; height: auto;}
+.accordion-texto {flex: 1; font-size: 16px;}
+
+/* Columna derecha */
+.right-side {
+  flex: 1;
+  padding: 20px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-side p {
+  margin: 0 auto;
+  background-color: rgb(187, 187, 187);
+  color: rgb(0, 0, 34);
+  text-align: center;
+  line-height: 1.6;
+  padding: 90px 30px;
+  max-width: 350px;
+  width: 100%;
+}
+
+/* Formato de imágenes de proyectos */
+.image-block {
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.texto-bajo-img {
+  background-color: rgb(204, 102, 0);
+  color: rgb(0, 0, 34);
+  padding: 10px 15px;
+  text-align: center;
+}
+
+/* Responsivo de columnas en pila */
+@media screen and (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .social-links a {
-    font-size: 1.5rem;
+  .left-side, .right-side {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+
+/*Proyectos*/
+.proyectos-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.titulo-proyectos {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: rgb(0, 0, 34);
+}
+
+/* Primer fila, solo 2 proyectos */
+.fila-dos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.fila-dos .image-block {max-width: 450px; flex: 1;}
+.fila-dos .image-block img {height: 250px; object-fit: cover;}
+
+/* Otras filas de 3 */
+.fila-tres {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  justify-items: center;
+}
+
+/* Boton para ver mas*/
+.btn-ver-mas {
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 34);
+  color: rgb(255, 255, 204);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+  color: rgb(204, 102, 0);
+  transform: scale(1.05);
+}
+
+/* Responsivo */
+@media screen and (max-width: 900px) {
+  .fila-dos .image-block {
+    max-width: 350px;
+  }
+  .fila-dos .image-block img {
+    height: 200px;
+  }
+
+  .fila-tres {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .fila-dos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fila-dos .image-block {
+    max-width: 100%;
+  }
+
+  .fila-tres {
+    grid-template-columns: 1fr;
   }
 }
