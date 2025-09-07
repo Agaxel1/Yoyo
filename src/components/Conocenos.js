@@ -103,18 +103,6 @@ const Conocenos = () => {
                         </div>                  
                     </div>
                 </div>
-
-                <div className="accordion-item">
-                <button 
-                    className={`accordion-header ${activos.includes(6) ? "active" : ""}`} 
-                    onClick={() => toggleContenido(6)}
-                >
-                    <span className="triangle">▶</span> Nuestro camino
-                </button>
-                    <div className={`accordion-content ${activos.includes(6) ? "open" : ""}`}>
-                    Nuestro camino.
-                    </div>
-                </div>
             </div>
 
             <div className='right-side'>

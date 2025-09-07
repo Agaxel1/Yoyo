@@ -1,16 +1,16 @@
 import React from "react";
 import Header from "../components/Header";
-import Proyectos from "../components/Proyectos";
+import TimeLine from "../components/TimeLine";
 import Footer from "../components/Footer";
 
-const Memoria = () => {
+const Camino = () => {
   return (
     <>
       <Header />
-      <Proyectos/>
+      <TimeLine />
       <Footer />
     </>
   );
 };
 
-export default Memoria;
+export default Camino;

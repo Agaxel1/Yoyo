@@ -10,8 +10,12 @@ const Redes = () => {
     const instagramUrl = process.env.REACT_APP_INSTAGRAM_URL;
 
     return (
-    <section className="trabajo">
+    <section className="redes">
     <h2>Nuestras Redes</h2>
+    <p>Queremos estar más cerca de ti. A través de nuestras redes compartimos 
+      historias, actividades y momentos únicos. Conéctate con nosotros y ayúdanos 
+      a llevar nuestro mensaje más lejos. Porque creemos firmemente que "El ser 
+      humano vino a este mundo para ser feliz."</p>
       <div className="redes-container">
         <div className="social-links">
             <a href={facebookUrl} target="_blank" rel="noopener noreferrer">

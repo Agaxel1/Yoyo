@@ -38,8 +38,8 @@ const Navbar = () => {
 
             <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
                 <li><a href="/Home">La Fundación</a></li>
-                <li><a href="/Comunidad">Comunidad Consciente</a></li>
-                <li><a href="/Memoria">El Archivo De La Memoria</a></li>
+                <li><a href="/Home">Comunidad Consciente</a></li>
+                <li><a href="/Home">El Archivo De La Memoria</a></li>
             </ul>
         </nav>
     );

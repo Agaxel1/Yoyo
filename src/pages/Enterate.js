@@ -1,15 +1,16 @@
 import React from "react";
 import Header from "../components/Header";
+import Proyectos from "../components/Proyectos";
 import Footer from "../components/Footer";
 
-const Projects = () => {
+const Enterate = () => {
   return (
     <>
       <Header />
-      <p>Comunidad</p>
+      <Proyectos/>
       <Footer />
     </>
   );
 };
 
-export default Projects;
+export default Enterate;

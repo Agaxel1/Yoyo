@@ -6,10 +6,10 @@ const SubNavbar = () => {
         <nav class="sub-navbar">
             <ul>
                 <li><a href="/Conocenos">Conócenos</a></li>
-                <li><a href="/Home">Nuestro camino</a></li>
-                <li><a href="/Home">Enterate</a></li>
+                <li><a href="/NuestroCamino">Nuestro camino</a></li>
+                <li><a href="/Enterate">Enterate</a></li>
                 <li><a href="/Encuentranos">Encuentranos</a></li>
-                <li><a href="/Home">Apoyanos</a></li>
+                <li><a href="/Apoyanos">Apoyanos</a></li>
             </ul>
         </nav>
     )
